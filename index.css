@@ -1,6 +1,5 @@
 
-
-#outPopUp {
+#BG {
   position: absolute;
   width: 900px;
   height: 500px;
@@ -14,21 +13,22 @@
   text-align: center;
 }
 
-#outPopUp1 {
+#Title {
   position: absolute;
   width: 800px;
   height: 100px;
-    padding: 20px; 
-      border-radius: 25px;
+  padding: 20px; 
+  border-radius: 25px;
   z-index: 15;
   top: 50%;
   left: 50%;
   margin: -50px 0 0 -450px;
-    color: white;
+  color: white;
   text-align: left;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 50px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
 }
+
 #Img {
   position: absolute;
   z-index: 15;
@@ -119,13 +119,69 @@
   font-size: 20px;
 }
 
+#Projects {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 250px 0 0 -30px;
+  color: white;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+}
+
+#Proj1 {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 290px 0 0 -80px;
+  color: white;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+}
+
+#Proj2 {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 330px 0 0 -80px;
+  color: white;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+}
+
+#Proj3 {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 370px 0 0 -80px;
+  color: white;
+  text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+}
+
 #Social {
   position: absolute;
   width: 700px;
   height: 100px;
   z-index: 15;
   top: 50%;
-    left: 50%;
+  left: 50%;
   margin: 250px 0 0 300px;
   color: white;
   text-align: left;
@@ -140,25 +196,8 @@
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: 290px 0 0 300px;
-  color: white;
+  margin: 290px 0 0 280px;
   text-align: left;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 20px;
-}
-
-#GHPara {
-  position: absolute;
-  width: 700px;
-  height: 100px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: 300px 0 0 350px;
-  color: white;
-  text-align: left;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 20px;
 }
 
 #DC {
@@ -168,23 +207,45 @@
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: 350px 0 0 300px;
-  color: white;
+  margin: 290px 0 0 330px;
   text-align: left;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 20px;
 }
 
-#DCPara {
+#Masto {
   position: absolute;
   width: 700px;
   height: 100px;
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: 360px 0 0 350px;
+  margin: 290px 0 0 380px;
+  text-align: left;
+}
+
+#Bracket {
+  position: absolute;
+  width: 700px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 335px 0 0 280px;
   color: white;
   text-align: left;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+}
+
+#BrcPara {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 370px 0 0 280px;
+  color: white;
+  text-align: center;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
 }
