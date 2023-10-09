@@ -9,7 +9,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.anim {
+    border: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.anim:hover {opacity: 1}
+    
 #BG {
   position: absolute;
   width: 900px;
@@ -151,7 +157,6 @@ body {
   top: 50%;
   left: 50%;
   margin: 110px 0 0 -80px;
-  color: white;
   text-align: left;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
@@ -165,7 +170,6 @@ body {
   top: 50%;
   left: 50%;
   margin: 150px 0 0 -80px;
-  color: white;
   text-align: left;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
@@ -179,7 +183,6 @@ body {
   top: 50%;
   left: 50%;
   margin: 190px 0 0 -80px;
-  color: white;
   text-align: left;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
@@ -240,10 +243,7 @@ body {
   top: 50%;
   left: 50%;
   margin: 155px 0 0 280px;
-  color: white;
   text-align: left;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 20px;
 }
 
 #BrcPara {
@@ -294,30 +294,30 @@ body {
 <b>Projects</b>
 </p>
 <div id="Proj1">
-<a href="https://github.com/BlackPearlOrigin/blackpearlorigin" style="color: #ff6246"> Black Pearl Origin </a>
+<a href="https://github.com/BlackPearlOrigin/blackpearlorigin" style="color: #ff6246", target="_blank", button class = "anim"> Black Pearl Origin </a>
 </div>
 <div id="Proj2">
-<a href="https://github.com/Y0URD34TH/Project-GLD" style="color: #ff6246"> Project GLD </a>
+<a href="https://github.com/Y0URD34TH/Project-GLD" style="color: #ff6246", target="_blank", button class = "anim"> Project GLD </a>
 </div>
 <div id="Proj3">
-<a href="https://github.com/fmhy/" style="color: #ff6246"> FreeMediaHeckYeah </a>
+<a href="https://github.com/fmhy/" style="color: #ff6246", target="_blank", button class = "anim"> FreeMediaHeckYeah </a>
 </div>
 <p id="Social">
 <b>Socials</b>
 </p>
 <div id="GH">
-<a href="https://github.com/qiracy">
-  <img border="0" src="https://qiracy.github.io/Icons/githubicon.png" width="40" height="40">
+<a href="https://github.com/qiracy", target="_blank">
+  <img border="0" src="https://qiracy.github.io/Icons/githubicon.png" width="40" height="40", button class = "anim">
 </a>
 </div>
 <div id="DC">
-<a href="https://discord.com/">
-  <img border="0" src="https://qiracy.github.io/Icons/discordicon.png" width="40" height="40">
+<a href="https://discord.com/", target="_blank">
+  <img border="0" src="https://qiracy.github.io/Icons/discordicon.png" width="40" height="40", button class = "anim">
 </a>
 </div>
 <div id="Masto">
-<a href="https://mastodon.social/@qiracy">
-  <img border="0" src="https://qiracy.github.io/Icons/mastodonicon.png" width="40" height="40">
+<a href="https://mastodon.social/@qiracy", target="_blank">
+  <img border="0" src="https://qiracy.github.io/Icons/mastodonicon.png" width="40" height="40", button class = "anim">
 </a>
 </div>
 <div id="Bracket">
