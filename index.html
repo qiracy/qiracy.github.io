@@ -2,7 +2,7 @@
 <head>
 <style>
 body {
-  background-image: url('https://raw.githubusercontent.com/qiracy/qiracy.github.io/main/Icons/bluebg.jpg');
+  background-image: url('https://cdna.artstation.com/p/assets/images/images/041/374/720/large/alex-blue-water-color-artwork.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -12,7 +12,7 @@ body {
 }
 .anim:hover {opacity: 1}
     
-#BG {
+.modal {
   position: absolute;
   width: 900px;
   height: 500px;
@@ -25,78 +25,48 @@ body {
   background: #2e3039;
 }
 
-#Flag {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -180px 0 0 -430px;
-  font-size: 7px;
-}
-
-#Info {
-  position: absolute;
-  width: 900px;
-  height: 0px;
+.modal .header {
+  position: relative;
+  width: 920px;
+  height: 22px;
   border-radius: 5px;
-  padding: 20px; 
+  padding: 10px;
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: -300px 0 0 -450px;
+  margin: -270px 0 0 -470px;
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
   color: white;
+  opacity: 0.8;
   background-color: #23252e;
-  opacity: 0.8;
 }
 
-#ModalInfo {
+.modal .header .buttons {
   position: absolute;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -290px 0 0 -5px;
-  color: white;
-  opacity: 0.8;
+  right: 0;
+  top: 9px;
+}
+
+.modal .header .buttons span {
+  padding: 5px 3px;
+  cursor: pointer;
+  text-align: right;
   font-size: 15px;
-  font-family: "Lucida Console", "Courier New", monospace;
-  text-align: center;
 }
 
-#Info1 {
-  position: absolute;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -290px 0 0 -77px;
-  color: white;
-  opacity: 0.8;
-  font-size: 20px;
-  font-family: "Lucida Console", "Courier New", monospace;
-  text-align: center;
+.modal .header .buttons span:hover {
+  background: #ccd6ff;
 }
 
-#Neofetch {
-  position: absolute;
-  width: 500px;
-  height: 200px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -230px 0 0 -410px;
-  color: #57a694;
-  font-size: 20px;
-  font-family: "Lucida Console", "Courier New", monospace;
-}
-
-#Info2 {
+.modal .content {
   position: absolute;
   width: 350px;
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: -160px 0 0 70px;
+  margin: -140px 0 0 50px;
   color: white;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
@@ -108,23 +78,31 @@ body {
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: 125px 0 0 70px;
+  margin: 145px 0 0 50px;
 }
 
-.modal {
+#Neofetch {
   position: absolute;
-  width: 900px;
-  height: 10px;
-  text-align: right;
+  width: 500px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -190px 0 0 -660px;
+  color: #57a694;
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.modal .header .buttons span {
-  padding: 5px 3px;
-  cursor: pointer;
-}
-
-.modal .header .buttons span:hover {
-  background: #ccd6ff;
+#Flag {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -155px 0 0 -680px;
+  font-size: 7px;
 }
 
 .box {
@@ -135,7 +113,7 @@ body {
 }
 
 .box2 {
-	height: 20px;
+    height: 20px;
   width: 25px;
   display:inline;
   float:left;
@@ -194,9 +172,13 @@ body {
 </style>
 </head>
 <body>
-<div id="BG">
-</div>
-<pre id="Flag", style="color: #317fff;">                                                                                     
+<div class="modal">
+    <div class="header">
+      <span>root@qiracy:~</span>
+      <span class="buttons"><span class="min">➖</span><span class="max">🔳</span><span class="close">✖️</span> </span>
+    </div>
+    <div class="content">
+    <pre id="Flag", style="color: #317fff;">                                                                                     
 
                  =*#%%%%%#*=                                                           
                       %%@@@@@@@@@@@@@@@@@@%%%%%%#*                                                  
@@ -241,17 +223,6 @@ body {
 <div id="Neofetch">
 root@qiracy:<span style="color: #317fff;">[~] $</span> neofetch 
 </div>
-<div id="Info">
-</div>
-<div id="ModalInfo" class="modal">
-<div class="header">
-<span class="buttons"><span class="min">➖</span><span class="max">🔳</span><span class="close">✖️</span></span>
-</div>
-</div>
-<div id="Info1">
-root@qiracy: ~
-</div>
-<div id ="Info2">
 <span style="color: #317fff;">root</span>@<span style="color: #317fff;">qiracy</span>
 <br>➖➖➖➖➖➖
 <br> <span style="color: #317fff;"><b>Name:</b></span> qiracy
@@ -279,6 +250,7 @@ root@qiracy: ~
 <div class="box2 twelve"></div>
 <div class="box2 fourteen"></div>
 <div class="box2 sixteen"></div>
+</div>
 </div>
 </body>
 </html>
