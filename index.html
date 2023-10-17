@@ -1,17 +1,140 @@
+
 <html>
-<head>
 <style>
 body {
   background-image: url('https://raw.githubusercontent.com/qiracy/qiracy.github.io/main/Icons/bluebg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  } 
+
+.tray {
+  position: absolute;
+  background-color: #23252e;
+  opacity: 0.8;
+  width: 650px;
+  height: 30px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 16;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
+
+.tray .item {
+    justify-content: center; 
+    align-items: center;
+    display:flex;
+}
+
+.tray .item:hover {
+  background: #47638e;
+  cursor: pointer;
+}
+
+.tray .line {
+  height:3px;
+  width: 50px;
+  background-color: #a9f4ff;
+  position: absolute; 
+  bottom: 2px;
+}
+
 .anim {
   opacity: 0.7;
   transition: 0.3s;
 }
 .anim:hover {opacity: 1}
-    
+
+.fsmodal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 20px; 
+  z-index: 15;
+  margin: 30px 0 0 0px;
+  background: #2e3039;
+}
+
+.fsmodal .fsheader {
+  position: relative;
+  width: 101%;
+  height: 22px;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 15;
+  font-size: 20px;
+  margin: -20px 0 0 -20px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  color: white;
+  opacity: 0.8;
+  background-color: #23252e;
+}
+
+
+.fsmodal .fsheader .fsbuttons {
+  position: absolute;
+  right: 0;
+  top: 9px;
+}
+
+.fsmodal .fsheader .fsbuttons span {
+  padding: 5px 3px;
+  cursor: pointer;
+  text-align: right;
+  font-size: 15px;
+}
+
+.fsmodal .fsheader .fsbuttons span:hover {
+  background: #5f667c;
+}
+
+.fsmodal .fscontent {
+  position: absolute;
+  width: 350px;
+  z-index: 15;
+  margin: 100px 0 0 500px;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+}
+
+#FSColors {
+  position: absolute;
+  width: 200px;
+  z-index: 15;
+  margin: 380px 0 0 500px;
+}
+
+#FSNeofetch {
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -190px 0 0 -660px;
+  color: #57a694;
+  font-size: 20px;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#FSFlag {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -155px 0 0 -680px;
+  font-size: 7px;
+}
+
 .modal {
   position: absolute;
   width: 900px;
@@ -21,7 +144,7 @@ body {
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: -300px 0 0 -450px;
+  margin: -270px 0 0 -450px;
   background: #2e3039;
 }
 
@@ -57,7 +180,7 @@ body {
 }
 
 .modal .header .buttons span:hover {
-  background: #ccd6ff;
+  background: #5f667c;
 }
 
 .modal .content {
@@ -113,7 +236,7 @@ body {
 }
 
 .box2 {
-    height: 20px;
+  height: 20px;
   width: 25px;
   display:inline;
   float:left;
@@ -170,9 +293,15 @@ body {
   background-color: #ffffff;
 }
 </style>
-</head>
 <body>
-<div class="modal">
+<div class="tray">
+  <div class = "item">
+  <img src="https://raw.githubusercontent.com/qiracy/qiracy.github.io/main/Icons/terminal.png" width="50px" class="item" height="55px">
+  </div>
+  <div class="line">
+  </div>
+</div>
+  <div class="modal">
     <div class="header">
       <span>root@qiracy:~</span>
       <span class="buttons"><span class="min">➖</span><span class="max">🔳</span><span class="close">✖️</span> </span>
@@ -252,5 +381,217 @@ root@qiracy:<span style="color: #317fff;">[~] $</span> neofetch
 <div class="box2 sixteen"></div>
 </div>
 </div>
+  <div class="fsmodal" style="display: none;">
+    <div class="fsheader">
+      <span>root@qiracy:~</span>
+      <span class="fsbuttons">
+        <span class="fsmin">➖</span>
+        <span class="fsmax">🔳</span>
+        <span class="fsclose">✖️</span>
+      </span>
+    </div>
+    <div class="fscontent">
+       <pre id="FSFlag", style="color: #317fff;">                                                                                     
+
+                 =*#%%%%%#*=                                                           
+                      %%@@@@@@@@@@@@@@@@@@%%%%%%#*                                                  
+        #%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%#*+                                           
+      *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%#*=                                     
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%#*=                 #%%%#       
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@%##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%%%%@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@.....*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@%=.....:@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@%........@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@:.........#@@@@@@@@@@@@@@@@@@@@@@@@...:@@@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@%....%-....:@@@@@@%%@@@@@@@@@@@@@@=.....%@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:.*@%%..........:%@@@@@@@@@.....:*@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%...............:@@@@@%.........+@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%..................:@@+...........@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.....................*@@...%@*...%@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ .....................=@%@@@@@@%@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@...=@@@@#..............#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+..@@@@@@@....:%#=......@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@:..@@@@%@@....@@@@@@:.. @@@@@@@@@@@@@@@@@@@@@@@@@@@%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#....=##=......=@@@@@%...@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*...........@#...%%@@@..=@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.........:@@@#....:=....@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%:.......:+#@:.........#@@%@@@@@@@@@@@@@@@@@@%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@@+...................=@@@@@@@@@@@@%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@%+#@=....+%@*...=@....+:........@@@@@@@@@@@@@%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@#.........=@@@@-..*@....%=...+@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@:........@@@@@@@@@@@@*:*@#...+%@@@+#@@@@@%%%%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@%........:@@@@@@@@@@@@@@%%@##@@@+....@%%%%%%%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@.....-%@@@@@@@@@@@@@@%%%%%%%%*....#=-*%%%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@*-=%%@@@@@@@@@@@@@@@%%%%%%%@@@ .......+%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%+.........@%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%=........#%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%%%%%%%=....%%@%%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@%@@%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#+      
+      #@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%@@@@@%@%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#+      
+      *@@@@@@@@@@@@@@@%*                       -#%%%@%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#+      
+        #%%%###                                       *#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#+      
+                                                            +%%%%@%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+                                                                   =*%%%%%%%%%%%%%%%%%%%%#=         
+</pre>
+<div id="FSNeofetch">
+root@qiracy:<span style="color: #317fff;">[~] $</span> neofetch 
+</div>
+<span style="color: #317fff;">root</span>@<span style="color: #317fff;">qiracy</span>
+<br>➖➖➖➖➖➖
+<br> <span style="color: #317fff;"><b>Name:</b></span> qiracy
+<br> <span style="color: #317fff;"><b>Alias:</b></span> Q
+<br> <span style="color: #317fff;"><b>Interests:</b></span> cybersecurity, OSINT, software development
+<br> <span style="color: #317fff;"><b>Languages:</b></span> <span style="color: #22b9ff;">Python</span>, <span style="color: #ff8d29;">Rust</span>, <span style="color: #89e051;">Shell</span>, <span style="color: #e34c26;">HTML</span>/<span style="color: #8b62c8;">CSS</span>, <span style="color: #f1e05a;">JS</span>
+<br><span style="color: #317fff;"><b>Github: </b></span><a href="https://github.com/qiracy", target="_blank", style="color: white;", button class = "anim">qiracy</a>
+<br><span style="color: #317fff;"><b>Discord: </b></span><a href="https://discord.com/", target="_blank", style="color: white;", button class = "anim">qiracy</a>
+<br><span style="color: #317fff;"><b>Mastodon: </b></span><a href="https://mastodon.social/@qiracy", target="_blank", style="color: white;", button class = "anim">qiracy</a> <br>
+</div>
+<div id="FSColors">
+<div class="box one"></div>
+<div class="box three"></div>
+<div class="box five"></div>
+<div class="box seven"></div>
+<div class="box nine"></div>
+<div class="box eleven"></div>
+<div class="box thirteen"></div>
+<div class="box fifteen"></div>
+<div class="box2 two"></div>
+<div class="box2 four"></div>
+<div class="box2 six"></div>
+<div class="box2 eight"></div>
+<div class="box2 ten"></div>
+<div class="box2 twelve"></div>
+<div class="box2 fourteen"></div>
+<div class="box2 sixteen"></div>
+</div>
+</div>
+<script>
+  const modal = document.querySelector('.modal');
+  const fsmodal = document.querySelector('.fsmodal');
+  const content = document.querySelector('.content');
+  const fscontent = document.querySelector('.fsmodal .content');
+  const header = document.querySelector('.header');
+  const fsheader = document.querySelector('.fsmodal .fsheader');
+  const buttons = document.querySelector('.buttons');
+  const fsbuttons = document.querySelector('.fsmodal .fsbuttons');
+  const minButton = document.querySelector('.min');
+  const fsminButton = document.querySelector('.fsmin');
+  const maxButton = document.querySelector('.max');
+  const fsmaxButton = document.querySelector('.fsmax');
+  const closeButton = document.querySelector('.close');
+  const fscloseButton = document.querySelector('.fsclose');
+  const item = document.querySelector('.item')
+  const line = document.querySelector('.line')
+
+  let isMinimized = false;
+  let isMaximized = false;
+  
+function toggleModal() {
+  if (!modal.style.display || modal.style.display === 'none') {
+    modal.style.display = 'block';
+    line.style.display = 'block';
+  } else {
+    modal.style.display = 'none';
+    line.style.display = 'none';
+  }
+}
+
+// Function to toggle the fsmodal and modal
+function toggleFsModal() {
+  if (!fsmodal.style.display || fsmodal.style.display === 'none') {
+    fsmodal.style.display = 'block';
+    line.style.display = 'block';
+  } else {
+    fsmodal.style.display = 'none';
+    line.style.display = 'none';
+  }
+}
+
+item.addEventListener('click', () => {
+  if (isMaximized) {
+    toggleFsModal();
+    line.style.display = 'block'
+  } else if (isMinimized) {
+    toggleModal();
+    line.style.display = 'block'
+  }
+  else {
+  toggleModal();
+  line.style.display = 'block'
+  }
+});
+
+line.addEventListener('click', () => {
+  if (isMinimized) {
+    toggleFsModal();
+  } else {
+    toggleModal();
+  }
+});
+
+minButton.addEventListener('click', () => {
+  if (!isMinimized) {
+    modal.style.display = 'none';
+    fsmodal.style.display = 'none';
+    isMinimized = true;
+  } else {
+    modal.style.display = 'block';
+    fsmodal.style.display = 'none';
+    isMinimized = false;
+  }
+});
+
+fsminButton.addEventListener('click', () => {
+  if (isMaximized) {
+    fsmodal.style.display = 'none';
+    isMinimized = true;
+  } else {
+    if (isMaximized) {
+      fsmodal.style.display = 'block';
+    } else {
+      modal.style.display = 'block';
+    }
+    isMinimized = false;
+    isMaximized = false;
+  }
+});
+
+fsmaxButton.addEventListener('click', () => {
+  if (!isMaximized) {
+    modal.style.display = 'none';
+    fsmodal.style.display = 'block';
+    isMaximized = true;
+  } else {
+    modal.style.display = 'block';
+    fsmodal.style.display = 'none';
+    isMaximized = false;
+  }
+});
+
+maxButton.addEventListener('click', () => {
+  if (!isMaximized) {
+    modal.style.display = 'none';
+    fsmodal.style.display = 'block';
+    isMaximized = true;
+  } else {
+    modal.style.display = 'block';
+    fsmodal.style.display = 'none';
+    isMaximized = false;
+  }
+});
+
+closeButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+  fsmodal.style.display = 'none';
+  line.style.display = 'none';
+});
+
+fscloseButton.addEventListener('click', () => {
+  modal.style.display = 'none';
+  fsmodal.style.display = 'none';
+  line.style.display = 'none';
+  isMaximized = false;
+});
+</script>
 </body>
 </html>
