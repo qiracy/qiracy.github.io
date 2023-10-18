@@ -532,11 +532,8 @@ line.addEventListener('click', () => {
 minButton.addEventListener('click', () => {
   if (!isMinimized) {
     modal.style.display = 'none';
-    fsmodal.style.display = 'none';
-    isMinimized = true;
   } else {
     modal.style.display = 'block';
-    fsmodal.style.display = 'none';
     isMinimized = false;
   }
 });
@@ -544,7 +541,6 @@ minButton.addEventListener('click', () => {
 fsminButton.addEventListener('click', () => {
   if (isMaximized) {
     fsmodal.style.display = 'none';
-    isMinimized = true;
   } else {
     if (isMaximized) {
       fsmodal.style.display = 'block';
